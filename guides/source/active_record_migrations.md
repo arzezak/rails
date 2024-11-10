@@ -1303,6 +1303,11 @@ contents of the current `db/schema.rb` or `db/structure.sql` file. If a
 migration can't be rolled back, `bin/rails db:reset` may not help you. To find
 out more about dumping the schema see [Schema Dumping and You][] section.
 
+If you need an alternative to `db:reset` that explicitly runs all migrations,
+consider using the `bin/rails db:migrate:reset` command. It is functionally
+equivalent to `bin/rails db:drop db:create db:schema:dump db:migrate`. You can
+follow that command with `bin/rails db:seed` if needed.
+
 [Schema Dumping and You]: #schema-dumping-and-you
 
 ### Running Specific Migrations
